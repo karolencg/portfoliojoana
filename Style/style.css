@@ -6,18 +6,31 @@
 }
 
 body {
-    height: 100vh;
+    /* height: 100vh; */
     box-sizing: border-box;
     background-color: #000000;
     color: #f6f6f6
 }
 
-.titulo-destaque {
+.cabecalho {
+    padding: 2% 0% 0% 15% ;
+}
+
+.cabecalho__menu {
+    display: flex;
+    gap: 80px;
+}
+
+.cabecalho__menu__link {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
     color: #22d4fd;
+    text-decoration: none; /*Para tirar as decorações do texto*/
 }
 
 .apresentacao {
-    margin: 10% 18.5%;
+    padding: 5% 15%; /*distancia entre o texto e o menu*/
     display: flex; /*falando p/ o codigo que vamos usar flex box*/
     align-items: center;
     justify-content: space-between; /*usabilidade do flexbox*/
@@ -35,6 +48,10 @@ body {
     font-family: 'Krona One', sans-serif; /*nome da fonte*/
 }
 
+.titulo-destaque {
+    color: #22d4fd;
+}
+
 .apresentacao__conteudo__texto {
     font-size: 24px;
     font-family: 'Montserrat', sans-serif ;
@@ -42,18 +59,46 @@ body {
 
 .apresentacao__links {
     display: flex;
+    flex-direction: column;
     justify-content: space-between; /*separamos os botões*/
+    align-items: center;
+    gap: 32px;
+}
+
+.apresentacao__links__subtitulo {
+    font-family: 'Krona One', sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+
 }
 
 .apresentacao__links__link {
-    background-color: #22d4fd;
-    width: 280px;
+    /*background-color: #22d4fd;*/
+    display: flex;
+    justify-content: center;
+    gap: 16px; /*espaço entre a palavra e o icone*/
+    border: 2px solid #22d4fd;
+    width: 378px;
     text-align: center; /*alinhas os textos no centro*/
-    border-radius: 16px; /*arredondamento dos botões*/
+    border-radius: 8px; /*arredondamento dos botões*/
     font-size: 24px; /*tamanho da fonte dos botões*/
     padding: 21.5px 0px; /*o primeiro valor sempre será referebte ao eixo vertical e o segundo do eixo horizontal*/
     text-decoration: none; /*para tirar italico e sublinhado*/
-    color: #000000;
+    color: #f6f6f6;
     font-family: 'Montserrat', sans-serif;
     font-weight: 600; /*Peso da fonte + negrito*/
+}
+
+.apresentacao__links__link:hover { /*hover é a animação de mouse em cima do botão, auterando a cor de fundo*/
+    background-color: #272727;
+}
+
+.rodape {
+    background-color: #22d4fd;
+    color: #000000;
+    padding: 23.64px;
+    text-align: center; /*para centralizar o texto*/
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    font-weight: 400;
 }
